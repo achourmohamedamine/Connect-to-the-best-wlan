@@ -67,13 +67,10 @@ def connect ():
     Alert.delete(1.0,END)
     if process.returncode==0:
         result=f"successfully connected to {ssid}"
-        Alert.delete(1.0,END)
-        
         Alert.insert(1.0,result)
         Alert.pack(fill=BOTH,expand=True)
     else :
         result=f"Error connecting to {ssid}: {error.decode('utf-8')}"
-        Alert.delete(1.0,END)
         Alert.insert(1.0,result)
         Alert.pack(fill=BOTH,expand=True)
 
